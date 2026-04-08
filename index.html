@@ -21,17 +21,37 @@ body {
 
 .hero {
   height:100vh;
-  background:url('ND DOME.jpg') center/cover no-repeat;
+  background:url('COVER.jpg') center center / cover no-repeat;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   color:white;
   text-shadow:0 2px 10px rgba(0,0,0,0.7);
+  position:relative;
+}
+
+.hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.hero * {
+  position:relative;
+  z-index:2;
 }
 
 .hero h1 {
-  font-size:3rem;
+  font-size:3.5rem;
+  margin-bottom:10px;
+}
+
+.hero h2 {
+  font-size:2rem;
+  font-weight:300;
+  margin-top:0;
 }
 
 .grid {
@@ -74,114 +94,144 @@ body {
 <!-- HERO -->
 
 <section class="hero">
-<h1>Class of 2026</h1>
-<p>A journey that began with a dream… and leads to a future without limits.</p>
-<br>
-<p><strong>B.A COMPUTER ENGINEERING<br>B.A POLITICAL SCIENCE</strong></p>
+  <h1>Alex</h1>
+  <h2>Class of 2026</h2>
+  <p>A journey that began with a dream…</p>
+  <p>and became a story of perseverance, growth, and purpose.</p>
+  <br>
+  <p><strong>B.A COMPUTER ENGINEERING<br>B.A POLITICAL SCIENCE</strong></p>
 </section>
 
 <!-- PRIMARY -->
 
 <section class="section">
-<div class="title">The Beginning</div>
-<div class="grid">
-<img src="PRIMARY FIRST DAY.jpg">
-<img src="PRIMARY GRAD.jpg">
-<img src="PRIMARY GRAD COLLAGE.jpg">
-</div>
+  <div class="title">The Beginning</div>
+  <p class="subtitle">
+    Every story starts somewhere.  
+    This was the moment it all began — the first step into a world of learning, curiosity, and endless possibilities.
+  </p>
+  <div class="grid">
+    <img src="PRIMARY FIRST DAY.jpg">
+    <img src="PRIMARY GRAD.jpg">
+    <img src="PRIMARY GRAD COLLAGE.jpg">
+  </div>
 </section>
 
 <!-- HIGH SCHOOL -->
 
 <section class="section">
-<div class="title">High School</div>
-<p><strong>Salutatorian</strong></p>
-<div class="grid">
-<img src="HIGH SCHOOL GRAD 1.jpg">
-<img src="HIGH SCHOOL GRAD 2.jpg">
-<img src="HIGH SCHOOL GRAD FAMILY.jpg">
-<img src="HIGH SCHOOL SALUTATORIAN.jpg">
-<img src="HONOR ROLL 1.jpg">
-<img src="AWARDS 1.jpg">
-<img src="AWARDS 2.jpg">
-<img src="AWARDS 3.jpg">
-</div>
+  <div class="title">High School</div>
+  <p class="subtitle">
+    Years of dedication, discipline, and growth.  
+    A time where effort turned into achievement and dreams started to take shape.
+  </p>
+  <p><strong>Salutatorian</strong></p>
+  <div class="grid">
+    <img src="HIGH SCHOOL GRAD 1.jpg">
+    <img src="HIGH SCHOOL GRAD 2.jpg">
+    <img src="HIGH SCHOOL GRAD FAMILY.jpg">
+    <img src="HIGH SCHOOL SALUTATORIAN.jpg">
+    <img src="HONOR ROLL 1.jpg">
+    <img src="AWARDS 1.jpg">
+    <img src="AWARDS 2.jpg">
+    <img src="AWARDS 3.jpg">
+  </div>
 </section>
 
 <!-- UNIVERSITY -->
 
 <section class="section">
-<div class="title">University Life</div>
-<div class="grid">
-<img src="ND KEAUGH HALL.jpg">
-<img src="FIRST TRAVEL OUT ND.jpg">
-<img src="FISRT DAY SNOW ND.jpg">
-<img src="SPAIN TRAVEL.jpg">
-<img src="SPAIN TRAVEL 1.jpg">
-<img src="FIRST BACK TO HOME.jpg">
-</div>
+  <div class="title">University Life</div>
+  <p class="subtitle">
+    A new chapter far from home.  
+    New challenges, new experiences, and a journey of independence, resilience, and transformation.
+  </p>
+  <div class="grid">
+    <img src="ND KEAUGH HALL.jpg">
+    <img src="FIRST TRAVEL OUT ND.jpg">
+    <img src="FISRT DAY SNOW ND.jpg">
+    <img src="SPAIN TRAVEL.jpg">
+    <img src="SPAIN TRAVEL 1.jpg">
+    <img src="FIRST BACK TO HOME.jpg">
+  </div>
 </section>
 
 <!-- STUDENT LIFE -->
 
 <section class="section">
-<div class="title">Student Life</div>
-<div class="grid full">
-<img src="LIVE STUDY 7.jpg">
-<img src="LIVE STUDY 8.jpg">
-</div>
+  <div class="title">Student Life</div>
+  <p class="subtitle">
+    Late nights, long hours, and relentless effort.  
+    The moments that tested limits — and proved what was possible.
+  </p>
+  <div class="grid full">
+    <img src="LIVE STUDY 7.jpg">
+    <img src="LIVE STUDY 8.jpg">
+  </div>
 </section>
 
 <!-- CAMPUS LIFE -->
 
 <section class="section">
-<div class="title">Notre Dame Life</div>
-<div class="grid">
-<img src="ND EMBLEM HALL.png">
-<img src="ND GOTTO OF OUR LADY OF LOURDES.jpg">
-<img src="ND TOUCH JESUS.jpg">
-<img src="ND STADIUM CONCERT.jpg">
-<img src="ND CHAMPION LEAGUE.jpg">
-<img src="STADIUM GAME.jpg">
-<img src="LAST TAILGATE.jpg">
-<img src="ND LIVE PARTY.jpg">
-</div>
+  <div class="title">Notre Dame Life</div>
+  <p class="subtitle">
+    More than a university — a home, a community, and a place filled with unforgettable memories.
+  </p>
+  <div class="grid">
+    <img src="ND EMBLEM HALL.png">
+    <img src="ND GOTTO OF OUR LADY OF LOURDES.jpg">
+    <img src="ND TOUCH JESUS.jpg">
+    <img src="ND STADIUM CONCERT.jpg">
+    <img src="ND CHAMPION LEAGUE.jpg">
+    <img src="STADIUM GAME.jpg">
+    <img src="LAST TAILGATE.jpg">
+    <img src="ND LIVE PARTY.jpg">
+  </div>
 </section>
 
 <!-- FRIENDS -->
 
 <section class="section">
-<div class="title">Friends</div>
-<div class="grid">
-<img src="FRIENDS ND.jpg">
-<img src="FRIENDS ND 1.jpg">
-<img src="FRIENDS ND 2.jpg">
-</div>
+  <div class="title">Friendship</div>
+  <p class="subtitle">
+    The moments in between became the memories that will last a lifetime.  
+    Laughter, support, and the people who made every day unforgettable.
+  </p>
+  <div class="grid">
+    <img src="FRIENDS ND.jpg">
+    <img src="FRIENDS ND 1.jpg">
+    <img src="FRIENDS ND 2.jpg">
+  </div>
 </section>
 
-<!-- PEOPLE -->
+<!-- GRATITUDE -->
 
 <section class="section">
-<div class="title">People Who Matter</div>
-<div class="grid">
-<img src="yolis y alex.png">
-<p>Yoli casi tía</p>
-<img src="alex, elias.png">
-<p>Alex y Elias (papá)</p>
-</div>
+  <div class="title">Gratitude</div>
+  <p class="subtitle">
+    Behind every achievement, there is unwavering love and support.  
+    Thank you to those who stood by me, believed in me, and made this journey possible.
+  </p>
+  <div class="grid">
+    <img src="yolis y alex.png">
+    <img src="alex, elias.png">
+  </div>
 </section>
 
 <!-- FUTURE -->
 
 <section class="section">
-<div class="title">Graduation & Future</div>
-<div class="grid" id="grad-gallery">
-<!-- aquí agregas fotos después -->
-</div>
+  <div class="title">Graduation & Future</div>
+  <p class="subtitle">
+    This is not the end — it is only the beginning.  
+    The future is waiting.
+  </p>
+  <div class="grid" id="grad-gallery">
+  </div>
 </section>
 
 <div class="footer">
-<p>Thank you for being part of this journey ❤️</p>
+  <p>Class of 2026 🎓</p>
 </div>
 
 </body>
