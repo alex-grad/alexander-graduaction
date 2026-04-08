@@ -130,6 +130,14 @@
       font-size: 0.98rem;
     }
 
+    .signature {
+      display: block;
+      margin-top: 10px;
+      font-style: italic;
+      color: #0c2340;
+      font-weight: 600;
+    }
+
     .feature {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -168,6 +176,26 @@
       color: #4f4f4f;
       font-size: 1.04rem;
       margin-bottom: 12px;
+    }
+
+    /* Specific photo fixes */
+    .cover-photo img {
+      object-position: center top;
+    }
+
+    .proud-moment img {
+      object-fit: contain;
+      background: #f1f1f1;
+    }
+
+    .quiet-strength img {
+      object-fit: contain;
+      background: #f1f1f1;
+    }
+
+    .family-photo img {
+      object-fit: contain;
+      background: #f7f7f7;
     }
 
     .quote-section {
@@ -231,8 +259,20 @@
   </section>
 
   <section class="section">
-    <div class="feature">
-      <img src="PRIMARY FIRST DAY.jpg" alt="Primary first day">
+    <div class="feature cover-photo">
+      <img src="COVER.jpg" alt="Cover photo of Alexander">
+      <div class="feature-text">
+        <h3>Alexander</h3>
+        <p>
+          A story shaped by faith, discipline, intelligence, and heart — built one step at a time through love, family, and perseverance.
+        </p>
+        <p>
+          This celebration honors not only an academic achievement, but also the person you have become and the bright future ahead.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature reverse">
       <div class="feature-text">
         <h3>Where the Journey Began</h3>
         <p>
@@ -242,19 +282,18 @@
           From the earliest school days to the achievements that would follow, this was the start of a future built with faith, dedication, and love.
         </p>
       </div>
+      <img src="PRIMARY FIRST DAY.jpg" alt="Primary first day">
     </div>
 
-    <div class="feature reverse">
+    <div class="feature">
+      <img src="PRIMARY GRAD COLLAGE.jpg" alt="Primary graduation collage">
       <div class="feature-text">
         <h3>Early Milestones</h3>
         <p>
-          Childhood brought the first signs of determination, joy, and the strength of character that would keep growing through the years.
+          You are the light of my eyes, my greatest pride, my happiness, and the person I will love for all my life.
         </p>
-        <p>
-          These memories are more than photographs — they are the foundation of a life full of dreams and purpose.
-        </p>
+        <p class="signature">With love, Minss</p>
       </div>
-      <img src="PRIMARY GRAD COLLAGE.jpg" alt="Primary graduation collage">
     </div>
   </section>
 
@@ -265,11 +304,14 @@
     </p>
 
     <div class="grid">
-      <div class="card">
+      <div class="card proud-moment">
         <img src="HIGH SCHOOL GRAD 1.jpg" alt="High school graduation 1">
         <div class="card-body">
           <h3>A Proud Moment</h3>
-          <p>A well-earned milestone that reflected years of commitment, effort, and perseverance.</p>
+          <p>
+            A well-earned milestone that reflected years of commitment, effort, and perseverance.
+            <span class="signature">With love, your aunt Nidia Cantu</span>
+          </p>
         </div>
       </div>
 
@@ -326,6 +368,37 @@
         <div class="card-body">
           <h3>A Legacy of Effort</h3>
           <p>Recognition became part of a larger story of character, responsibility, and purpose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Words of Love</h2>
+    <p class="section-subtitle">
+      A few of the people who love Alexander most, with words from the heart.
+    </p>
+
+    <div class="grid">
+      <div class="card family-photo">
+        <img src="yolis y alex.png" alt="Yolis and Alex">
+        <div class="card-body">
+          <h3>Mi niño bello</h3>
+          <p>
+            Solo eso, desde el corazón.
+            <span class="signature">Yolenis Bottaro</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card family-photo">
+        <img src="alex, elias.png" alt="Alex and Elias">
+        <div class="card-body">
+          <h3>I Love You, Son</h3>
+          <p>
+            A simple message with a lifetime of love behind it.
+            <span class="signature">Your dad</span>
+          </p>
         </div>
       </div>
     </div>
@@ -476,7 +549,15 @@
       <div class="card"><img src="LIVE STUDY 4.jpg" alt="Study 4"><div class="card-body"><h3>Steady Growth</h3><p>Success came from consistency, patience, and resilience.</p></div></div>
       <div class="card"><img src="LIVE STUDY 5.jpg" alt="Study 5"><div class="card-body"><h3>Everyday Excellence</h3><p>The college journey is shaped by small efforts repeated with purpose.</p></div></div>
       <div class="card"><img src="LIVE STUDY 6.jpg" alt="Study 6"><div class="card-body"><h3>Commitment in Motion</h3><p>Each season brought new challenges and new opportunities to grow.</p></div></div>
-      <div class="card"><img src="LIVE STUDY 7.jpg" alt="Study 7"><div class="card-body"><h3>Quiet Strength</h3><p>Behind every achievement were many unseen moments of dedication.</p></div></div>
+
+      <div class="card quiet-strength">
+        <img src="LIVE STUDY 7.jpg" alt="Study 7">
+        <div class="card-body">
+          <h3>Quiet Strength</h3>
+          <p>Behind every achievement were many unseen moments of dedication.</p>
+        </div>
+      </div>
+
       <div class="card"><img src="LIVE STUDY 8.jpg" alt="Study 8"><div class="card-body"><h3>Becoming More</h3><p>College was not only about learning facts, but about becoming the person meant to be.</p></div></div>
       <div class="card"><img src="LIVE STUDY 9.jpg" alt="Study 9"><div class="card-body"><h3>The Journey Continues</h3><p>Every milestone was one more chapter in a story of perseverance and purpose.</p></div></div>
       <div class="card"><img src="LIVE STUDY FORMAL.jpg" alt="Formal"><div class="card-body"><h3>Formal Milestones</h3><p>Special moments reflected both academic growth and personal maturity.</p></div></div>
