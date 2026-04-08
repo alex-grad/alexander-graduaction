@@ -28,6 +28,7 @@
     }
 
     .hero {
+      position: relative;
       min-height: 100vh;
       background:
         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
@@ -41,42 +42,62 @@
     }
 
     .hero-content {
-      max-width: 900px;
-      background: rgba(0,0,0,0.28);
-      padding: 42px 26px;
+      max-width: 980px;
+      width: 100%;
+      background: rgba(0,0,0,0.22);
+      padding: 38px 24px;
       border-radius: 24px;
       backdrop-filter: blur(3px);
     }
 
+    .hero-cover {
+      width: 260px;
+      max-width: 75vw;
+      margin: 0 auto 24px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      border: 4px solid rgba(255,255,255,0.85);
+      background: white;
+    }
+
+    .hero-cover img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero .class-year {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
     .hero h1 {
-      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
       margin-bottom: 12px;
       letter-spacing: 1px;
     }
 
-    .hero h2 {
-      font-size: clamp(1.4rem, 3vw, 2.1rem);
-      margin-bottom: 18px;
-      font-weight: 400;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-
     .degrees {
-      margin-top: 20px;
       font-size: 1.08rem;
       font-weight: bold;
       line-height: 1.8;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
+      margin-bottom: 18px;
+    }
+
+    .hero-message {
+      font-size: 1.08rem;
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .section {
       max-width: 1250px;
       margin: 0 auto;
-      padding: 70px 22px;
+      padding: 72px 22px;
     }
 
     .section-title {
@@ -88,10 +109,58 @@
 
     .section-subtitle {
       max-width: 900px;
-      margin: 0 auto 40px;
+      margin: 0 auto 38px;
       text-align: center;
       color: #5a5a5a;
       font-size: 1.05rem;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 42px;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    }
+
+    .feature.reverse {
+      grid-template-columns: 1fr 1.05fr;
+    }
+
+    .feature img {
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      object-fit: cover;
+      object-position: center;
+      background: #eee;
+    }
+
+    .feature-text {
+      padding: 34px;
+    }
+
+    .feature-text h3 {
+      color: #0c2340;
+      font-size: 1.85rem;
+      margin-bottom: 14px;
+    }
+
+    .feature-text p {
+      color: #4f4f4f;
+      font-size: 1.03rem;
+      margin-bottom: 12px;
+    }
+
+    .small-feature img {
+      min-height: 280px;
+      object-fit: contain;
+      padding: 12px;
+      background: #fafafa;
     }
 
     .grid {
@@ -138,64 +207,28 @@
       font-weight: 600;
     }
 
-    .feature {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 30px;
-      align-items: center;
-      margin-bottom: 48px;
+    .contain-photo img {
+      object-fit: contain;
+      background: #f5f5f5;
+    }
+
+    .placeholder {
       background: white;
       border-radius: 24px;
-      overflow: hidden;
+      padding: 34px 26px;
+      text-align: center;
       box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+      border: 2px dashed #cfcfcf;
     }
 
-    .feature.reverse {
-      grid-template-columns: 1fr 1.1fr;
-    }
-
-    .feature img {
-      width: 100%;
-      height: 100%;
-      min-height: 420px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .feature-text {
-      padding: 36px;
-    }
-
-    .feature-text h3 {
+    .placeholder h3 {
       color: #0c2340;
-      font-size: 1.9rem;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
     }
 
-    .feature-text p {
-      color: #4f4f4f;
-      font-size: 1.04rem;
-      margin-bottom: 12px;
-    }
-
-    /* Specific photo fixes */
-    .cover-photo img {
-      object-position: center top;
-    }
-
-    .proud-moment img {
-      object-fit: contain;
-      background: #f1f1f1;
-    }
-
-    .quiet-strength img {
-      object-fit: contain;
-      background: #f1f1f1;
-    }
-
-    .family-photo img {
-      object-fit: contain;
-      background: #f7f7f7;
+    .placeholder p {
+      color: #666;
     }
 
     .quote-section {
@@ -227,7 +260,11 @@
       }
 
       .feature img {
-        min-height: 320px;
+        min-height: 300px;
+      }
+
+      .hero-cover img {
+        height: 290px;
       }
     }
 
@@ -237,58 +274,74 @@
       }
 
       .hero-content {
-        padding: 28px 18px;
+        padding: 26px 16px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
+      <div class="hero-cover">
+        <img src="COVER.jpg" alt="Alexander cover photo">
+      </div>
+
+      <div class="class-year">Class of 2026</div>
       <h1>Alexander Bittar</h1>
-      <h2>Class of 2026</h2>
-      <p>A journey that began with a dream...</p>
-      <p>and became a story of perseverance, growth, and purpose.</p>
 
       <div class="degrees">
         B.A. COMPUTER ENGINEERING<br>
         B.A. POLITICAL SCIENCE
       </div>
+
+      <p class="hero-message">
+        A journey that began with a dream and became a story of perseverance, growth, faith, and purpose — built through love, family, sacrifice, and unforgettable memories.
+      </p>
     </div>
   </section>
 
+  <!-- EARLY YEARS -->
   <section class="section">
-    <div class="feature cover-photo">
-      <img src="COVER.jpg" alt="Cover photo of Alexander">
-      <div class="feature-text">
-        <h3>Alexander</h3>
-        <p>
-          A story shaped by faith, discipline, intelligence, and heart — built one step at a time through love, family, and perseverance.
-        </p>
-        <p>
-          This celebration honors not only an academic achievement, but also the person you have become and the bright future ahead.
-        </p>
-      </div>
-    </div>
+    <h2 class="section-title">The Beginning</h2>
+    <p class="section-subtitle">
+      The first steps of a story filled with love, promise, and the beginning of a beautiful future.
+    </p>
 
-    <div class="feature reverse">
-      <div class="feature-text">
-        <h3>Where the Journey Began</h3>
-        <p>
-          Every great story begins with a first step. This moment marked the beginning of a path filled with curiosity, growth, and promise.
-        </p>
-        <p>
-          From the earliest school days to the achievements that would follow, this was the start of a future built with faith, dedication, and love.
-        </p>
-      </div>
+    <div class="feature small-feature">
       <img src="PRIMARY FIRST DAY.jpg" alt="Primary first day">
+      <div class="feature-text">
+        <h3>First School Day</h3>
+        <p>
+          Every great journey begins with a first step. This special day marked the beginning of a path filled with learning, growth, dreams, and purpose.
+        </p>
+        <p>
+          From that first school morning to the remarkable achievements that followed, this was the start of a future shaped by love, faith, and determination.
+        </p>
+      </div>
     </div>
 
-    <div class="feature">
+    <div class="feature reverse small-feature">
+      <div class="feature-text">
+        <h3>Kindergarten Graduation</h3>
+        <p>
+          A small cap, a big smile, and the first of many proud milestones to come.
+        </p>
+        <p>
+          Even then, there was already something special shining brightly — the joy, innocence, and promise of the amazing person you would become.
+        </p>
+      </div>
+      <img src="PRIMARY GRAD.jpg" alt="Primary graduation">
+    </div>
+
+    <div class="feature small-feature">
       <img src="PRIMARY GRAD COLLAGE.jpg" alt="Primary graduation collage">
       <div class="feature-text">
         <h3>Early Milestones</h3>
+        <p>
+          This season of life reminds us how everything started — with hope, tenderness, and the first steps toward a beautiful future.
+        </p>
         <p>
           You are the light of my eyes, my greatest pride, my happiness, and the person I will love for all my life.
         </p>
@@ -297,19 +350,20 @@
     </div>
   </section>
 
+  <!-- HIGH SCHOOL -->
   <section class="section">
     <h2 class="section-title">High School Years</h2>
     <p class="section-subtitle">
-      A season of discipline, excellence, and achievements that opened the door to new dreams.
+      A chapter of discipline, growth, maturity, and preparation for the next great step.
     </p>
 
     <div class="grid">
-      <div class="card proud-moment">
+      <div class="card contain-photo">
         <img src="HIGH SCHOOL GRAD 1.jpg" alt="High school graduation 1">
         <div class="card-body">
           <h3>A Proud Moment</h3>
           <p>
-            A well-earned milestone that reflected years of commitment, effort, and perseverance.
+            A beautiful milestone that reflected years of effort, determination, and dedication.
             <span class="signature">With love, your aunt Nidia Cantu</span>
           </p>
         </div>
@@ -319,7 +373,7 @@
         <img src="HIGH SCHOOL GRAD 2.jpg" alt="High school graduation 2">
         <div class="card-body">
           <h3>Growth and Achievement</h3>
-          <p>High school was a time of learning, maturity, and preparation for the next chapter.</p>
+          <p>High school became a season of learning, discipline, and preparation for everything still to come.</p>
         </div>
       </div>
 
@@ -327,7 +381,7 @@
         <img src="HIGH SCHOOL GRAD FAMILY.jpg" alt="High school graduation family">
         <div class="card-body">
           <h3>Celebrated with Family</h3>
-          <p>Every achievement becomes even more meaningful when shared with the people who helped make it possible.</p>
+          <p>Every accomplishment shines even brighter when shared with the family who stood beside you from the beginning.</p>
         </div>
       </div>
 
@@ -335,15 +389,205 @@
         <img src="HIGH SCHOOL SALUTATORIAN.jpg" alt="Salutatorian">
         <div class="card-body">
           <h3>Salutatorian</h3>
-          <p>A recognition of excellence, discipline, and a remarkable dedication to academic success.</p>
+          <p>A recognition of excellence, discipline, intelligence, and the consistency that defined this chapter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORDS OF LOVE -->
+  <section class="section">
+    <h2 class="section-title">Words of Love</h2>
+    <p class="section-subtitle">
+      Messages from the people who have loved Alexander through every season of this journey.
+    </p>
+
+    <div class="grid">
+      <div class="card contain-photo">
+        <img src="yolis y alex.png" alt="Yolis and Alex">
+        <div class="card-body">
+          <h3>Mi niño bello</h3>
+          <p>
+            A simple message, full of tenderness and love.
+            <span class="signature">Yolenis Bottaro</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card contain-photo">
+        <img src="alex, elias.png" alt="Alex and Elias">
+        <div class="card-body">
+          <h3>A New Chapter Begins</h3>
+          <p>
+            The day we took you from Florida to Indiana was filled with mixed emotions — sadness because we were letting you go, but also deep joy and pride as we watched you begin this new chapter of your life.
+          </p>
+          <p>
+            It was a moment of love, sacrifice, hope, and the certainty that you were stepping into something great.
+            <span class="signature">With love, your dad</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTRE DAME -->
+  <section class="section">
+    <h2 class="section-title">Notre Dame Begins</h2>
+    <p class="section-subtitle">
+      A new chapter in Indiana — full of firsts, memories, friendship, and the life built at Notre Dame.
+    </p>
+
+    <div class="feature">
+      <img src="FIRST TRAVEL OUT ND.jpg" alt="First travel out to Notre Dame">
+      <div class="feature-text">
+        <h3>The Journey to Notre Dame</h3>
+        <p>
+          Leaving home to begin life at Notre Dame was the beginning of a new chapter — one filled with courage, independence, and unforgettable first experiences.
+        </p>
+        <p>
+          It marked the start of years that would be shaped by learning, friendship, faith, challenge, and extraordinary growth.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>First-Year Memories</h3>
+        <p>
+          Keough Hall became home, and Room 106 became one of the very first places where college life truly began.
+        </p>
+        <p>
+          It was there that routines, friendships, conversations, and memories started to take shape.
+        </p>
+      </div>
+      <img src="room first year.jpg" alt="First year room">
+    </div>
+  </section>
+
+  <!-- CAMPUS LIFE -->
+  <section class="section">
+    <h2 class="section-title">Life at Notre Dame</h2>
+    <p class="section-subtitle">
+      Friendship, faith, tradition, joy, and the everyday moments that made the journey unforgettable.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="FISRT DAY SNOW ND.jpg" alt="First snow day">
+        <div class="card-body">
+          <h3>First Snow Day at Notre Dame</h3>
+          <p>A first winter in Indiana — a memory of wonder, new beginnings, and the beauty of change.</p>
         </div>
       </div>
 
       <div class="card">
+        <img src="FRIENDS ND.jpg" alt="Friends ND">
+        <div class="card-body">
+          <h3>Meaningful Connections</h3>
+          <p>Some of the greatest gifts of college are the friendships that turn simple days into lifelong memories.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="FRIENDS ND 1.jpg" alt="Friends ND 1">
+        <div class="card-body">
+          <h3>Shared Joy</h3>
+          <p>Joy multiplies when it is shared with the people who walk beside us through every season.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="FRIENDS ND 2.jpg" alt="Friends ND 2">
+        <div class="card-body">
+          <h3>Special Memories</h3>
+          <p>Friendship made this journey warmer, brighter, and even more meaningful.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ND KEAUGH HALL.jpg" alt="Keough Hall">
+        <div class="card-body">
+          <h3>Keough Hall</h3>
+          <p>A place that became home and held so many first-year memories.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ND EMBLEM HALL.png" alt="Hall emblem">
+        <div class="card-body">
+          <h3>Hall Pride</h3>
+          <p>Every symbol and tradition added identity and heart to the Notre Dame experience.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ND TOUCH JESUS.jpg" alt="Touchdown Jesus">
+        <div class="card-body">
+          <h3>Campus Tradition</h3>
+          <p>Iconic places on campus became part of the story and memory of these years.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ND GOTTO OF OUR LADY OF LOURDES.jpg" alt="Grotto">
+        <div class="card-body">
+          <h3>Faith and Reflection</h3>
+          <p>Quiet spaces of gratitude and prayer gave depth and meaning to the journey.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="FIRST BACK TO HOME.jpg" alt="Back home">
+        <div class="card-body">
+          <h3>Back Home</h3>
+          <p>Returning home carried new meaning after the first experiences and growth of college life.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="LAST TAILGATE.jpg" alt="Last tailgate">
+        <div class="card-body">
+          <h3>Last Tailgate</h3>
+          <p>School spirit, friendship, and shared celebrations became unforgettable parts of the journey.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ND STADIUM CONCERT.jpg" alt="Stadium concert">
+        <div class="card-body">
+          <h3>Music and Memories</h3>
+          <p>Some of the best memories were made in the joy of shared experiences beyond the classroom.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ND LIVE PARTY.jpg" alt="Live party">
+        <div class="card-body">
+          <h3>Joy in the Journey</h3>
+          <p>Laughter, celebration, and daily life made the college years even more special.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOGNITIONS -->
+  <section class="section">
+    <h2 class="section-title">Recognitions and Achievements</h2>
+    <p class="section-subtitle">
+      Awards and honors that reflect discipline, excellence, and years of hard work.
+    </p>
+
+    <div class="grid">
+      <div class="card contain-photo">
         <img src="HONOR ROLL 1.jpg" alt="Honor roll">
         <div class="card-body">
           <h3>Honor Roll</h3>
-          <p>A reflection of consistency, focus, and a strong commitment to doing every step with excellence.</p>
+          <p>
+            This recognition is a reflection of your discipline, your quiet effort, and the way you kept moving forward with determination and heart.
+          </p>
+          <p>
+            Watching you grow and succeed has been one of the greatest joys and proudest blessings of our lives.
+          </p>
         </div>
       </div>
 
@@ -351,7 +595,7 @@
         <img src="AWARDS 1.jpg" alt="Awards 1">
         <div class="card-body">
           <h3>Recognition and Excellence</h3>
-          <p>Moments like these honored the hard work and determination that defined the journey.</p>
+          <p>Each honor reflects not only achievement, but the discipline and perseverance behind it.</p>
         </div>
       </div>
 
@@ -359,7 +603,7 @@
         <img src="AWARDS 2.jpg" alt="Awards 2">
         <div class="card-body">
           <h3>Commitment Rewarded</h3>
-          <p>Each award marked not only success, but also the discipline and resilience behind it.</p>
+          <p>These recognitions celebrate the consistency, maturity, and effort that marked the journey.</p>
         </div>
       </div>
 
@@ -373,201 +617,31 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2 class="section-title">Words of Love</h2>
-    <p class="section-subtitle">
-      A few of the people who love Alexander most, with words from the heart.
-    </p>
-
-    <div class="grid">
-      <div class="card family-photo">
-        <img src="yolis y alex.png" alt="Yolis and Alex">
-        <div class="card-body">
-          <h3>Mi niño bello</h3>
-          <p>
-            Solo eso, desde el corazón.
-            <span class="signature">Yolenis Bottaro</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="card family-photo">
-        <img src="alex, elias.png" alt="Alex and Elias">
-        <div class="card-body">
-          <h3>I Love You, Son</h3>
-          <p>
-            A simple message with a lifetime of love behind it.
-            <span class="signature">Your dad</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="feature">
-      <img src="FIRST TRAVEL OUT ND.jpg" alt="First travel out of Notre Dame">
-      <div class="feature-text">
-        <h3>Notre Dame Begins</h3>
-        <p>
-          Leaving home and beginning life at Notre Dame marked the start of a new chapter — one full of courage, independence, and unforgettable firsts.
-        </p>
-        <p>
-          It was the beginning of a journey that would be shaped by learning, friendship, faith, and growth.
-        </p>
-      </div>
-    </div>
-
-    <div class="feature reverse">
-      <div class="feature-text">
-        <h3>First-Year Memories</h3>
-        <p>
-          Keough Hall became home, and Room 106 became part of the story — the place where new routines, first conversations, and unforgettable college memories began.
-        </p>
-        <p>
-          Every beginning carries something special, and this one carried the promise of four meaningful years ahead.
-        </p>
-      </div>
-      <img src="room first year.jpg" alt="First year room">
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">Notre Dame Life</h2>
-    <p class="section-subtitle">
-      Moments of friendship, campus life, tradition, and the beauty of everyday life at Notre Dame.
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <img src="FISRT DAY SNOW ND.jpg" alt="First snow day at Notre Dame">
-        <div class="card-body">
-          <h3>First Snow Day at Notre Dame</h3>
-          <p>A first winter in Indiana — a beautiful memory of wonder, change, and new beginnings.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="FRIENDS ND.jpg" alt="Friends at Notre Dame">
-        <div class="card-body">
-          <h3>Meaningful Connections</h3>
-          <p>Friendships became one of the greatest gifts of the journey, turning everyday moments into lasting memories.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="FRIENDS ND 1.jpg" alt="Friends at Notre Dame 1">
-        <div class="card-body">
-          <h3>Shared Joy</h3>
-          <p>College is remembered not only for what is achieved, but for the people who walk beside us.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="FRIENDS ND 2.jpg" alt="Friends at Notre Dame 2">
-        <div class="card-body">
-          <h3>Special Memories</h3>
-          <p>Simple moments with friends became some of the most meaningful chapters of this story.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ND KEAUGH HALL.jpg" alt="Keough Hall">
-        <div class="card-body">
-          <h3>Keough Hall</h3>
-          <p>A place that became home, filled with memories of first-year life, friendship, and growth.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ND EMBLEM HALL.png" alt="Hall emblem">
-        <div class="card-body">
-          <h3>Hall Pride</h3>
-          <p>Symbols and spaces on campus became part of the identity and heart of the Notre Dame experience.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ND TOUCH JESUS.jpg" alt="Touchdown Jesus">
-        <div class="card-body">
-          <h3>Campus Tradition</h3>
-          <p>Notre Dame’s iconic places added meaning, faith, and tradition to every stage of the journey.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ND GOTTO OF OUR LADY OF LOURDES.jpg" alt="Grotto">
-        <div class="card-body">
-          <h3>Faith and Reflection</h3>
-          <p>Some of the most powerful moments are the quiet ones — spaces of gratitude, prayer, and reflection.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="FIRST BACK TO HOME.jpg" alt="First trip back home">
-        <div class="card-body">
-          <h3>Back Home</h3>
-          <p>Returning home carried a new meaning — bringing back stories, growth, and memories from college life.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="LAST TAILGATE.jpg" alt="Last tailgate">
-        <div class="card-body">
-          <h3>Last Tailgate</h3>
-          <p>A celebration of school spirit, friendship, and unforgettable moments shared on campus.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ND STADIUM CONCERT.jpg" alt="Stadium concert">
-        <div class="card-body">
-          <h3>Music and Memories</h3>
-          <p>Not every unforgettable moment happens in class — some are found in the joy of shared experiences.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ND LIVE PARTY.jpg" alt="Party">
-        <div class="card-body">
-          <h3>Joy in the Journey</h3>
-          <p>College life is made special by the laughter, celebration, and friendships formed along the way.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- COLLEGE JOURNEY -->
   <section class="section">
     <h2 class="section-title">Study, Growth, and the College Journey</h2>
     <p class="section-subtitle">
-      Long days, formal moments, academic effort, and the quiet strength that built success one step at a time.
+      Long days, quiet strength, formal moments, and the dedication that built success one step at a time.
     </p>
 
     <div class="grid">
       <div class="card"><img src="LIVE STUDY 1.jpg" alt="Study 1"><div class="card-body"><h3>Building the Future</h3><p>Every hour of effort became part of a bigger purpose.</p></div></div>
       <div class="card"><img src="LIVE STUDY 2.jpg" alt="Study 2"><div class="card-body"><h3>Focused and Determined</h3><p>Progress was built day by day through commitment and discipline.</p></div></div>
       <div class="card"><img src="LIVE STUDY 4.jpg" alt="Study 4"><div class="card-body"><h3>Steady Growth</h3><p>Success came from consistency, patience, and resilience.</p></div></div>
-      <div class="card"><img src="LIVE STUDY 5.jpg" alt="Study 5"><div class="card-body"><h3>Everyday Excellence</h3><p>The college journey is shaped by small efforts repeated with purpose.</p></div></div>
-      <div class="card"><img src="LIVE STUDY 6.jpg" alt="Study 6"><div class="card-body"><h3>Commitment in Motion</h3><p>Each season brought new challenges and new opportunities to grow.</p></div></div>
-
-      <div class="card quiet-strength">
-        <img src="LIVE STUDY 7.jpg" alt="Study 7">
-        <div class="card-body">
-          <h3>Quiet Strength</h3>
-          <p>Behind every achievement were many unseen moments of dedication.</p>
-        </div>
-      </div>
-
-      <div class="card"><img src="LIVE STUDY 8.jpg" alt="Study 8"><div class="card-body"><h3>Becoming More</h3><p>College was not only about learning facts, but about becoming the person meant to be.</p></div></div>
-      <div class="card"><img src="LIVE STUDY 9.jpg" alt="Study 9"><div class="card-body"><h3>The Journey Continues</h3><p>Every milestone was one more chapter in a story of perseverance and purpose.</p></div></div>
+      <div class="card"><img src="LIVE STUDY 5.jpg" alt="Study 5"><div class="card-body"><h3>Everyday Excellence</h3><p>The journey was shaped by small efforts repeated with purpose.</p></div></div>
+      <div class="card"><img src="LIVE STUDY 6.jpg" alt="Study 6"><div class="card-body"><h3>Commitment in Motion</h3><p>Each season brought new challenges and new growth.</p></div></div>
+      <div class="card contain-photo"><img src="LIVE STUDY 7.jpg" alt="Study 7"><div class="card-body"><h3>Quiet Strength</h3><p>Behind every achievement were many unseen moments of dedication.</p></div></div>
+      <div class="card"><img src="LIVE STUDY 8.jpg" alt="Study 8"><div class="card-body"><h3>Becoming More</h3><p>College was not only about learning, but about becoming the person you were meant to be.</p></div></div>
+      <div class="card"><img src="LIVE STUDY 9.jpg" alt="Study 9"><div class="card-body"><h3>The Journey Continues</h3><p>Each milestone became another chapter in a story of perseverance and purpose.</p></div></div>
       <div class="card"><img src="LIVE STUDY FORMAL.jpg" alt="Formal"><div class="card-body"><h3>Formal Milestones</h3><p>Special moments reflected both academic growth and personal maturity.</p></div></div>
     </div>
   </section>
 
+  <!-- FIELD AND BEYOND -->
   <section class="section">
     <h2 class="section-title">Unforgettable Moments on the Field and Beyond</h2>
     <p class="section-subtitle">
-      School spirit, competition, travel, and the memories that made college life even more extraordinary.
+      Competition, spirit, travel, and memories that made these years even richer.
     </p>
 
     <div class="grid">
@@ -591,7 +665,7 @@
         <img src="SPAIN TRAVEL.jpg" alt="Spain travel">
         <div class="card-body">
           <h3>Beyond the Classroom</h3>
-          <p>Some experiences expanded the journey far beyond campus and added new perspectives to the story.</p>
+          <p>Some experiences expanded the journey beyond campus and added new perspectives to the story.</p>
         </div>
       </div>
 
@@ -605,14 +679,35 @@
     </div>
   </section>
 
+  <!-- GRADUATION PLACEHOLDERS -->
+  <section class="section">
+    <h2 class="section-title">Graduation Day</h2>
+    <p class="section-subtitle">
+      This space is reserved for graduation photos and videos, so the page can keep growing over time.
+    </p>
+
+    <div class="grid">
+      <div class="placeholder">
+        <h3>Graduation Photos</h3>
+        <p>Add the official graduation pictures here.</p>
+      </div>
+
+      <div class="placeholder">
+        <h3>Graduation Video</h3>
+        <p>Add the graduation video here when it is ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL MESSAGE -->
   <section class="quote-section">
     <p>
-      “The journey was never only about reaching the finish line, but about every lesson, every challenge, every friendship, and every moment that made the dream worth it.”
+      Your journey has been a gift to witness — full of faith, courage, effort, growth, and love. We are proud of all you have achieved, but even more proud of the person you are. This is only the beginning of everything still ahead.
     </p>
   </section>
 
   <footer class="footer">
-    <p>With love and pride, celebrating Alexander Bittar — Class of 2026.</p>
+    <p>With all our love and pride, celebrating Alexander Bittar — Class of 2026.</p>
   </footer>
 
 </body>
